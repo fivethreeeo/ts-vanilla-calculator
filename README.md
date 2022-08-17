@@ -17,4 +17,5 @@
 
 ### 프로그래밍 순서도
 
-<img src="https://user-images.githubusercontent.com/41741221/185074233-e1f6ef98-0336-4294-ad5e-d8cbb676996b.jpg">
+
+![flowchart](./flowchart_ts-calculator.jpg)
