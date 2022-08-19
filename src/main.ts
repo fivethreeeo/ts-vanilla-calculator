@@ -19,7 +19,14 @@ const element = {
 
 const setClear = (value: boolean) => (isClear = value);
 const setInput1 = (value: InputType) => (input1 = String(Number(value)));
-const setInput2 = (value: InputType) => (input2 = String(Number(value)));
+const setInput2 = (value: InputType) => {
+  if (value === null) {
+    input2 = null;
+    return;
+  }
+  input2 = String(Number(value));
+};
+
 const setOperator = (value: OperatorType) => (operator = value);
 const setAnswer = (value: AnswerType) => (answer = value);
 
@@ -95,7 +102,7 @@ const handleNumberBtn = ({ target }: MouseEvent) => {
     renderView(input1);
     return;
   }
-  setInput2(input2 + target.innerText);
+  setInput2((input2 ? input2 : "") + target.innerText);
   renderView(input2);
 };
 
