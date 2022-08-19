@@ -57,7 +57,7 @@ const renderView = (value: string | null) => {
 const handleOperatorBtn = ({ target }: MouseEvent) => {
   if (!(target instanceof HTMLButtonElement)) return;
 
-  const inputOperator: OperatorType = target.innerText;
+  const inputOperator = <OperatorType>target.innerText;
 
   if (inputOperator !== "=") {
     input2 || setOperator(inputOperator);
