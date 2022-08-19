@@ -60,7 +60,7 @@ const handleOperatorBtn = ({ target }: MouseEvent) => {
   const inputOperator: OperatorType = target.innerText;
 
   if (inputOperator !== "=") {
-    operator || setOperator(inputOperator);
+    input2 || setOperator(inputOperator);
     setClear(false);
     return;
   }
@@ -100,10 +100,12 @@ const handleNumberBtn = ({ target }: MouseEvent) => {
   if (operator === null) {
     setInput1(input1 + target.innerText);
     renderView(input1);
+    setClear(false);
     return;
   }
   setInput2((input2 ? input2 : "") + target.innerText);
   renderView(input2);
+  setClear(false);
 };
 
 const clearAll = () => {
