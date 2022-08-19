@@ -47,8 +47,7 @@ const renderView = (value: string | null) => {
   element.view.innerText = value === null ? "0" : value;
 };
 
-const handleOperatorBtn = (event: MouseEvent) => {
-  const { target } = event;
+const handleOperatorBtn = ({ target }: MouseEvent) => {
   if (!(target instanceof HTMLButtonElement)) return;
 
   const inputOperator: OperatorType = target.innerText;
@@ -87,9 +86,7 @@ const handleOperatorBtn = (event: MouseEvent) => {
   }
 };
 
-const handleNumberBtn = (event: MouseEvent) => {
-  const { target } = event;
-
+const handleNumberBtn = ({ target }: MouseEvent) => {
   if (!(target instanceof HTMLButtonElement)) return;
   if (target.className !== "number") return;
 
